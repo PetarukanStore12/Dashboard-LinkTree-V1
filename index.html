@@ -15,43 +15,73 @@
 }
     *{box-sizing:border-box;margin:0;padding:0}
 body {
-  body {
   font-family: 'Segoe UI', sans-serif;
-  background: var(--bg-url) no-repeat center/cover;
+  background: var(--bg-url) no-repeat center center / cover;
   color: var(--text);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  margin: 0;
+  padding: 20px;
+  transition: all 0.4s ease-in-out; /* ✨ Transisi halus */
+}
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  animation: fadeInUp 1s ease forwards;
+  margin: auto;
+  transition: all 0.4s ease-in-out; /* ✨ Transisi halus */
+}
+    /* ===================================================
+   🌐 RESPONSIVE VIEW - Semua Perangkat
+   =================================================== */
+
+/* 📱 Tampilan untuk layar kecil (HP) */
+@media (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
+  .card {
+    max-width: 92%;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .menu {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
 }
 
-/* Overlay transparan lembut */
-.overlay-bg {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
+/* 💻 Tampilan untuk layar besar (Laptop / Monitor) */
+@media (min-width: 1024px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    max-width: 480px;
+    padding: 24px;
+  }
 }
-    .overlay{
-      position: fixed; inset:0;
-      background: radial-gradient(circle at top, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
-      z-index: -1;
-    }
-    .card{
-      width: 100%;
-      max-width: 400px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-      animation: fadeInUp 1s ease forwards;
-    }
-    @keyframes fadeInUp {
-      from {opacity:0; transform: translateY(30px);}
-      to {opacity:1; transform: translateY(0);}
-    }
+
+/* 🖥️ Tambahan transisi lembut untuk semua elemen */
+* {
+  transition: all 0.3s ease-in-out;
+}
     .logo{
       width:100px;height:100px; margin: 0 auto; border-radius: 50%;
       background: var(--logo-url) no-repeat center/cover;
