@@ -30,15 +30,14 @@ body {
 .card {
   width: 100%;
   max-width: 420px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.02); /* hampir transparan total */
   border-radius: 20px;
   padding: 20px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px); /* blur tipis biar teks tetap kebaca */
+  -webkit-backdrop-filter: blur(4px); /* dukung Safari */
+  box-shadow: 0 0 20px rgba(0,0,0,0.25); /* bayangan lembut biar teks kelihatan */
   animation: fadeInUp 1s ease forwards;
   margin: auto;
-  transition: all 0.4s ease-in-out; /* ✨ Transisi halus */
 }
     /* ===================================================
    🌐 RESPONSIVE VIEW - Semua Perangkat
