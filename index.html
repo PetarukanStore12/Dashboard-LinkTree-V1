@@ -180,6 +180,27 @@ body {
       background: rgba(255,255,255,0.2);
       transform: scale(1.1);
     }
+    /* 🔧 Normalisasi tampilan di HP */
+@media (max-width: 600px) {
+  .menu {
+    padding: 8px 10px;       /* Kurangi tinggi tombol */
+    font-size: 13px;         /* Kecilkan teks */
+  }
+  .menu .label {
+    font-size: 13px;
+  }
+  .icon {
+    width: 22px;             /* Kecilkan icon */
+    height: 22px;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 18px;         /* Judul lebih proporsional */
+  }
+  .ticker span {
+    font-size: 12px;         /* Teks promo tidak kepanjangan */
+  }
+}
   </style>
 </head>
 <body>
