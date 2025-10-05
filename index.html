@@ -14,16 +14,19 @@
       --logo-url: url('https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/logo_profile.jpeg');
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-url) no-repeat center/cover;
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-    }
+    body {
+  background: radial-gradient(circle at 50% 50%, #2a0845, #4a00e0);
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://i.ibb.co/xF7R9fM/star-bg.gif');
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
     .overlay{
       position: fixed; inset:0;
       background: radial-gradient(circle at top, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
