@@ -18,24 +18,23 @@
   background: radial-gradient(circle at 50% 50%, #2a0845, #4a00e0);
   overflow: hidden;
 }
-body{
+body {
   font-family: 'Segoe UI', sans-serif;
-  background: var(--bg-url) no-repeat center center / cover;
   color: var(--text);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  background: var(--bg-url) center center / cover no-repeat;
   position: relative;
 }
 
-/* Tambahkan ini setelahnya */
-body::before {
-  content: "";
+/* Overlay transparan lembut */
+.overlay-bg {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* efek transparan lembut */
+  background: rgba(0, 0, 0, 0.45);
   z-index: -1;
 }
     .overlay{
