@@ -18,13 +18,24 @@
   background: radial-gradient(circle at 50% 50%, #2a0845, #4a00e0);
   overflow: hidden;
 }
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-url) no-repeat center center / cover;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Tambahkan ini setelahnya */
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('https://i.ibb.co/xF7R9fM/star-bg.gif');
-  background-size: cover;
-  opacity: 0.4;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* efek transparan lembut */
   z-index: -1;
 }
     .overlay{
