@@ -201,9 +201,24 @@ body {
     font-size: 12px;         /* Teks promo tidak kepanjangan */
   }
 }
+    /* 🎥 Fullscreen Video Background */
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.4;          /* 0.3 = transparan banget | 0.5 = lebih jelas */
+  pointer-events: none;  /* biar video gak ganggu klik */
+}
   </style>
 </head>
 <body>
+  <!-- 🎥 Video Background -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/bg-animasi.mp4" type="video/mp4">
+</video>
   <div class="overlay"></div>
   <main class="card">
     <div class="logo"></div>
