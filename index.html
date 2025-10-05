@@ -10,7 +10,7 @@
   --accent-2: #4a00e0;
   --text: #fff;
   --muted: #d1d1d1;
-  --bg-url: url('https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/manga-wallpaper-gif.gif');
+  --bg-url: url('https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/manga-wallpaper-gif-1.gif');
   --logo-url: url('https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/logo_profile.jpeg');
 }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -30,14 +30,12 @@ body {
 .card {
   width: 100%;
   max-width: 420px;
-  background: rgba(255, 255, 255, 0.02); /* hampir transparan total */
-  border-radius: 20px;
-  padding: 20px;
-  backdrop-filter: blur(4px); /* blur tipis biar teks tetap kebaca */
-  -webkit-backdrop-filter: blur(4px); /* dukung Safari */
-  box-shadow: 0 0 20px rgba(0,0,0,0.25); /* bayangan lembut biar teks kelihatan */
+  background: none; /* ❌ tanpa background */
+  border: none;     /* hilangkan border */
+  box-shadow: none; /* hilangkan bayangan */
+  padding: 0;
+  margin: 0 auto;
   animation: fadeInUp 1s ease forwards;
-  margin: auto;
 }
     /* ===================================================
    🌐 RESPONSIVE VIEW - Semua Perangkat
@@ -209,15 +207,15 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -2;
-  opacity: 0.7;          /* 0.3 = transparan banget | 0.5 = lebih jelas */
-  pointer-events: none;  /* biar video gak ganggu klik */
+  opacity: 0.9; /* 🌅 biar background jelas penuh */
+  pointer-events: none;
 }
   </style>
 </head>
 <body>
   <!-- 🎥 Video Background -->
 <video autoplay muted loop playsinline id="bg-video">
-  <source src="https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/manga-wallpaper-gif.gif">
+  <source src="https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/manga-wallpaper-gif-1.gif">
 </video>
   <div class="overlay"></div>
   <main class="card">
