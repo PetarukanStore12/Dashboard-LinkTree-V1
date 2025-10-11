@@ -24,12 +24,12 @@
       justify-content: center;
       overflow-x: hidden;
       margin: 0;
-      padding: 20px;
+      padding: 10px; /* 🔹 sedikit saja, biar mepet */
       transition: all 0.4s ease-in-out;
     }
     .card {
       width: 100%;
-      max-width: 420px;
+      max-width: 480px; /* 🔹 lebih lebar dari sebelumnya */
       background: none;
       border: none;
       box-shadow: none;
@@ -43,18 +43,18 @@
        =================================================== */
     @media (max-width: 500px) {
       body {
-        padding: 10px;
+        padding: 5px;
       }
       .card {
-        max-width: 92%;
-        padding: 15px;
+        max-width: 100%; /* 🔹 penuh layar di HP */
+        padding: 0;
       }
       h1 {
         font-size: 18px;
       }
       .menu {
         font-size: 13px;
-        padding: 9px 16px;
+        padding: 10px 16px;
       }
       .icon {
         width: 24px;
@@ -64,13 +64,9 @@
     }
 
     @media (min-width: 1024px) {
-      body {
-        justify-content: center;
-        align-items: center;
-      }
       .card {
-        max-width: 480px;
-        padding: 24px;
+        max-width: 500px;
+        padding: 0;
       }
     }
 
@@ -114,10 +110,15 @@
     .socials a:hover { transform: scale(1.1); }
     .socials img { width: 60%; height: 60%; }
 
-    .menus{display:flex;flex-direction:column;gap:10px;}
+    .menus {
+      display: flex;
+      flex-direction: column;
+      gap: 8px; /* 🔹 sedikit rapatkan antar tombol */
+      width: 100%;
+    }
 
-    /* ✅ MENU DIPERPANJANG DAN DIPERBESAR SEDIKIT */
-    .menu{
+    /* ✅ MENU LEBIH PANJANG & MELEBAR HAMPIR PENUH LAYAR */
+    .menu {
       width: 100%;
       display:flex;
       align-items:center;
@@ -125,16 +126,16 @@
       text-decoration:none;
       background: linear-gradient(135deg,var(--accent),var(--accent-2));
       color:#fff;
-      padding:12px 20px; /* 🔹 Lebih panjang dan sedikit lebih tinggi */
-      border-radius:999px;
+      padding: 12px 20px;
+      border-radius:18px; /* 🔹 tidak terlalu bulat */
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform .2s ease, box-shadow .2s ease;
-      font-size:15px; /* 🔹 Ukuran teks diperbesar sedikit */
+      font-size:15px;
       text-align: center;
       position: relative;
     }
-    .menu:hover{
-      transform: scale(1.05);
+    .menu:hover {
+      transform: scale(1.03);
       box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
     .menu .label {
@@ -144,8 +145,7 @@
       font-weight:600;
     }
 
-    /* === ICON TANPA BACKGROUND === */
-    .icon{
+    .icon {
       width:28px;
       height:28px;
       display:flex;
@@ -154,14 +154,19 @@
       font-size:20px;
       background:none !important;
     }
-    .icon img{
+    .icon img {
       width:100%;
       height:100%;
       object-fit:contain;
       filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
     }
 
-    .foot{text-align:center;color:var(--muted);margin-top:15px;font-size:12px;}
+    .foot {
+      text-align:center;
+      color:var(--muted);
+      margin-top:15px;
+      font-size:12px;
+    }
 
     /* Tombol musik */
     #music-toggle {
@@ -192,8 +197,9 @@
     /* 🔧 Normalisasi tampilan di HP */
     @media (max-width: 600px) {
       .menu {
-        padding: 10px 18px;  /* tetap lebih panjang dari sebelumnya */
+        padding: 12px 18px;
         font-size: 14px;
+        border-radius:16px;
       }
       .menu .label {
         font-size: 13px;
@@ -230,7 +236,6 @@
     <source src="https://petarukanstoreimage.wordpress.com/wp-content/uploads/2025/10/manga-wallpaper-gif-1.gif">
   </video>
 
-  <div class="overlay"></div>
   <main class="card">
     <div class="logo"></div>
     <h1>PETARUKAN STORE</h1>
